@@ -1,0 +1,28 @@
+RewriteEngine on
+
+# Prevent people from looking directly into folders
+# Disables the listing of a the directory
+Options -Indexes
+
+# request is not for a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# request is not for a file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# this is the only one i cant find anywhere
+RewriteCond %{REQUEST_FILENAME} !-l
+
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+
+
+#	^	begins the line to match.
+#	$	ends the line to match.
+#	.	Matches any single character
+#	+	Repeats the previous match one or more times
+#	*	Repeats the previous match zero or more times
+#	?	Makes the match optional						colou?r will match color and colour
+#	\	Escape the next character
+#	( )	Groups several characters into a single unit, and captures a match for use in a backreference

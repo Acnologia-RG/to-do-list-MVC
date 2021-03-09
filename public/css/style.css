@@ -1,0 +1,58 @@
+body {
+	margin : 0 auto;
+	width : 800px;
+}
+
+table {
+	width : 800px;
+}
+
+table, td, th {
+	border : 2px #ddd solid;
+	border-collapse : collapse;
+	background-color: #ccc;
+	color : black;
+}
+
+td, th {
+	padding : 5px;
+}
+
+th {
+	text-align : left;
+	cursor: pointer;
+}
+
+td.center{
+	text-align : center;
+}
+
+a {
+	color : black;
+}
+p.options{
+	text-align : right;
+}
+
+label {
+	display : inline-block;
+	width : 100px;
+}
+form div {
+	margin: 5px 0;
+}
+body>p:last-of-type {
+	margin-bottom: 300px;
+}
+form {
+	margin-bottom: 100px;
+}
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 4px;
+}
